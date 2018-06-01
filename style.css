@@ -1,0 +1,226 @@
+/*css reset start*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1.5;
+}
+
+/*end of css reset*/
+#title1, #result1{
+    display : none;
+}
+
+body{
+    background-image: url("images/background1.jpg");
+    background-size: cover;
+    font-family: 'Rhodium Libre', serif, sans-serif;
+    text-align: center;
+}
+main{
+    width: 100%;
+    padding-top: 1em;
+    margin-bottom: 1em;
+}
+header img{
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+}
+
+
+#title, #title1{
+    margin: auto;
+    text-shadow: 1px 1px 1px #000,-1px -1px 1px #000,-1px 1px 1px #000,1px -1px 1px #000;
+    font-family: 'Berkshire Swash', 'Arial Narrow Bold', sans-serif;
+    width:100%;
+    font-size:3em;
+    color: peachpuff;
+}
+#names{
+    margin: auto;
+    line-height: 1.2;    
+}
+input[type=text] {
+    font-family: 'Rhodium Libre', serif, sans-serif;
+    font-weight: bold;
+    box-shadow: 1px 1px 15px maroon,-1px -1px 15px maroon,-1px 1px 15px maroon,1px -1px 15px maroon;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 45px;
+    background-color: peachpuff;
+    color: maroon;
+}
+#bgselect{
+    margin: auto;
+    width:auto;
+}
+#result, #result1{
+    font-size: 1.5em;
+    height: 25px;;
+    margin: auto;
+}
+h2{
+    margin-bottom: 1em;    
+}
+#board{
+    display: inline-flex;
+    flex-wrap: nowrap; 
+    width: 100%;
+}
+#newgame, #submit{
+    text-shadow:0px 0px 1px peachpuff,0px 0px 1px peachpuff,0px 0px 1px peachpuff,0px 0px 1px peachpuff;
+    flex: 1 0 auto;
+    box-sizing: border-box;
+    border: 2px solid maroon;
+    text-shadow: 0px 0px 2px maroon;
+    box-shadow: 0px 0px 25px maroon;
+    border-radius: 45px;
+    background-color: pink;
+    background-size: cover;
+    margin-top: .5em;
+    font-size: 1.2em;
+}
+#newgame{
+    margin-top: .5em;
+}
+#submit{
+    margin: .5em 0 .3em 0;
+}
+#newgame:hover, #submit:hover{
+    border: 2px solid maroon;
+    text-shadow: 0px 0px 2px pink;
+    box-shadow: inset 0px 0px 25px maroon;
+    
+}
+#boxes{
+    line-height: 0;
+    display: inline-block;
+    flex: 0 0 auto;   
+}
+canvas{
+    background-color: white;
+    border: 2px solid maroon; 
+    box-shadow: 7px 7px 2px #000;
+}
+.rules{
+    text-shadow:0px 0px 1px pink,0px 0px 1px pink,0px 0px 1px pink,0px 0px 1px pink;
+    margin: auto;
+    width:25%;
+    color:maroon;
+    font-weight: bold;  
+}
+.rules p{
+    font-size: 1em;
+}
+p{
+    font-size: .9em;
+    margin: 1em;
+}
+canvas:hover{
+    background-color: palevioletred;
+}
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+}
+#result{
+    margin: auto;
+    width: 100%;
+    height: auto;
+    color: maroon;
+}
+#fb, #yt, #twit{
+
+    width: 59px;
+    height: 59px;
+    margin: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#fb{
+    background-image: url("images/fb.png");
+}
+#twit{
+    background-image: url("images/twit.png");
+}
+#yt{
+    background-image: url("images/yt.png");
+}
+#fb:hover{
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow: 0px 0px 10px 10px #3B5998;
+    background-image: url("images/fbbig.png");
+}
+#twit:hover{
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow: 0px 0px 10px 10px #00aced;
+    background-image: url("images/twitbig.png");
+}
+#yt:hover{
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow:0px 0px 10px 10px #f10000;
+    background-image: url("images/ytbig.png");
+}
+#social{
+    display: inline-flex;
+}
+@media only screen and (max-width: 839px){
+    #title, #result{
+        display: none;
+    }
+    #title1, #result1{
+        display: block;
+    }
+    input[type=text]{
+        padding: 5px 15px;
+    }
+    
+    body{
+        line-height: 1.1;
+    }
+    #title1{
+        font-size: 1.5em;
+    }
+    #board{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .rules{
+        margin-top: 15px;
+        width: 100%;
+    }
+    #newgame, #submit{
+        margin:7.5px;
+        width: 40%;
+    }
+}

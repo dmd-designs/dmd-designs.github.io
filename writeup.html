@@ -1,0 +1,79 @@
+<!DOCtype html>
+<html lang="en">
+    <head> 
+        <title>Tic Tac Toe Write Up by DLC</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="My first JS experience">
+        <meta name="keywords" content="tic,tac,toe">
+        <meta name="author" content="D.L. Clark">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky|Rhodium+Libre" rel="stylesheet">
+        <style>
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, font, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                outline: 0;
+                font-weight: inherit;
+                font-style: inherit;
+                font-size: 100%;
+                font-family: inherit;
+                vertical-align: baseline;
+            }
+            body{
+                background-image: url("images/background1.png");
+                background-size: cover;
+                font-family: 'Rhodium Libre', serif, sans-serif;
+                width: 65%;
+                margin: auto;
+            }
+            h1{
+                font-size: 3em;
+                text-align:center;
+            }
+            p{
+                line-height: 1.2;
+                font-size: 14pt;
+                text-indent: 50px;
+                text-align: justify;
+                text-justify:inter-word;
+
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Tic-Tac-Toe in JS!</h1>
+            <p>I made an application to play tic tac toe.  The application takes in the name of the users, allows for a background image change, all while playing Tic-Tac-Toe. I wanted to develope a game
+                and  this was probably the only algorithm I knew I could come up with in a short amount of time. It uses canvas, javascript, html, and css to maeke the whole user experience.  I have coded this 
+                all myself, with help from tutorials and everything I learned in the classroom.  
+            </p>
+            <p>I made this program with 2 arrays, 2 real function, one anonymous function, and gave it the ability to decide what to do thru if-else statements and switch-case statements. The first input element I used 
+                is the text box for name entry.  The second I used is the drop down menu to change the background image thru a 4 selection menu.  It was also my use of 3+ images. I didnt know if my 
+                canvas drawings counted as images. If that is the case I will end up have 6 or 7. I also have user input through the canvas areas, which are each square of the game board.  When they click
+                on a square it will draw their game piece on the selected square.   
+            </p>
+            <p>The functions I had to add to make this were weren't difficult, but the placement in the code was hard to figure out.  I had to add multiple error checks, variables, and if/switch statements.
+                I used an anonymous function to start the game when the web page loads. Inside that function there are 2 othe functions.  One is for the new game button.  It just reloads the page upon click.
+                It uses getElementById and addEventListener for the ability to reload.  </p>
+            <p>The second function I used does all the logic for the game. This is the boxClick function and it does everything.  First it goes to see what box was clicked on. If not it checks to see if the game is over.
+                If  the game is over it displays an error message right above the game board with innerHTML. As long as the game is still in play, it follows up with seeing if the box is already containing 
+                a game piece. It pushes an error message in the footer if it is. When the space is empty it draws the image using canvas, and stores the X or O in the xo array.  I divided the board up with 9 canvas boxes.  It made the game board
+                and made it way easier to place each shape. Only problem is it isn't fully responsive. This may change by the final turn in.  I need to find a way to shrink the board.
+            </p>
+            <p>After the X or O is drawn, it adds 1 to the turn count with turn++ syntax. My first array comes into play now. It changes the number of array that is the same as the box number to true. That way it cna check 
+                against the array to see which spaces are full. The second and third arrays keeps track of what number box is used and what piece it was that was place there. Next the for loop uses the xo array to decide if the game is over.
+                if 3 in row take play adn the arrays match it outputs the player that won. The final logic is an if statement that checks to see what turn it is. If the turn > 9 is calls a draw. And at anytime throught out the game,
+                the new game button will refresh the page which reloads a fresh game and resets the variables. Hope you enjoy this and I hope my write up isn't too long!!  Thanks for the assignment.  I had a lot of 
+                fun with this one.
+            </p>
+        </main>
+    </body>
+</html>

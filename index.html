@@ -1,0 +1,69 @@
+<!DOCtype html>
+<html lang="en">
+    <head> 
+        <title>Tic Tac Toe by DLC</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="My first JS experience">
+        <meta name="keywords" content="tic,tac,toe">
+        <meta name="author" content="D.L. Clark">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Rhodium+Libre" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <img src="images/title.png" alt="Tic Tac Toe">
+
+        </header>
+        <main>
+            <h1 id="title">Enter names and hit Start Game!</h1>
+            <div id="result">Names can be left blank! Just hit Start Game</div>
+
+        
+        <!--Section tag used for the Game Board area-->
+            <section id="board">
+                <!--Rules Div-->  
+                <div class="rules">
+
+                    <h2>Rule List</h2> 
+                    <p>1. Enter your names.<br>
+                        (if left blank X and O will be used)<br>
+                    2. Hit Start button.
+                    3. 1 person goes first, just click on a box and it will draw your mark.<br>
+                    4. First to get three X's or O's in a row wins!<br>
+                    5. Click new game to  start over at any time!</p>
+                </div>
+            
+                <!--Canvas areas for drawing X's and O's-->
+                <div id="boxes">
+                    <canvas id="b1" width="120" height="120"></canvas><canvas id="b2" width="120" height="120"></canvas><canvas id="b3" width="120" height="120"></canvas><br>
+                    <canvas id="b4" width="120" height="120"></canvas><canvas id="b5" width="120" height="120"></canvas><canvas id="b6" width="120" height="120"></canvas><br>
+                    <canvas id="b7" width="120" height="120"></canvas><canvas id="b8" width="120" height="120"></canvas><canvas id="b9" width="120" height="120"></canvas><br>
+                </div>
+                <div class="rules">
+                    <div id="names">
+                        <h4>Player #1 Enter your name<br>(letters only please!):</h4><input id="p1" type="text" name="Player 1">
+                        <h4>Player #2 Enter your name:</h4><input id="p2" type="text" name="Player 2"><br>
+                        <button type="submit" id="submit">Start Game</button><br><button type="submit" id="newgame">New Game</button>
+                        <h1 id="title1">Enter names or just hit start!</h1>
+                        <div id="result1">Works without names also.</div>
+                    </div>
+                             
+                </div>
+            </section>
+        </main>
+        <!--LOGIC RESULTS OUTPUT AREA. Mostly error reporting-->      
+        <footer>
+            <p>Created By Daniel Lee Clark<br>
+                First experience in javascript
+            </p>
+            <!--<div id="social">
+                <a href="https://www.facebook.com/" target="_blank"><div id="fb"></div></a>
+                <a href="https://twitter.com/" target="_blank"><div id="twit"></div></a>
+                <a href="https://www.youtube.com/user/" target="_blank"><div id="yt"></div></a> 
+            </div>-->
+        </footer>
+    </body>
+</html>
